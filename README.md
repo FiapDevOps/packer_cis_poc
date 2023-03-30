@@ -4,15 +4,15 @@
 Resizing para o disco local do ambiente:
 
 ```sh
-
-cd ˜/environment
 mkdir scripts
 curl -o scripts/resize.sh https://raw.githubusercontent.com/FiapDevOps/automation/main/cloud9/scripts/resize.sh && chmod +x scripts/resize.sh
 
 sh $HOME/environment/scripts/resize.sh 20 > /dev/null
 ```
 
-Instalando nossas depêndencias:
+---
+
+## Etapa 2: Instalando nossas depêndencias:
 
 ```sh
 # https://developer.hashicorp.com/packer/tutorials/docker-get-started/get-started-install-cli
@@ -22,11 +22,12 @@ sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinu
 sudo yum -y install packer
 
 # https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html
-sudo python -m pip install --upgrade pip
-pip install ansible boto3 boto
+python3 -m pip install --user ansible
 ```
 
 ---
+
+## Etapa 3: Testando o método para gerar uma Golden Image:
 
 Inicie o packer:
 
