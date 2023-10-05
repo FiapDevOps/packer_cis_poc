@@ -8,7 +8,7 @@ packer {
 }
 
 source "amazon-ebs" "ubuntu" {
-  ami_name      = "packer-linux-ubuntu-cis"
+  ami_name      = "packer-linux-ubuntu-cis-section-1"
   instance_type = "t3.medium"
   region        = "us-east-1"
   source_ami_filter {
@@ -34,6 +34,6 @@ build {
     use_proxy = false
     command = "ansible-playbook"
     playbook_file  = "site.yml"
-    extra_arguments = ["-v"]
+    extra_arguments = ["--tags", "section1"]
  }
 }

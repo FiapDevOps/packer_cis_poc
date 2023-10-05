@@ -15,15 +15,15 @@ sh $HOME/environment/scripts/resize.sh 20 > /dev/null
 ## Etapa 2: Instalando nossas depêndencias:
 
 ```sh
-# https://developer.hashicorp.com/packer/tutorials/docker-get-started/get-started-install-cli
 sudo rm /usr/sbin/packer
 sudo yum install -y yum-utils
 sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
 sudo yum -y install packer
-
-# https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html
 python3 -m pip install --user ansible
 ```
+
+# https://developer.hashicorp.com/packer/tutorials/docker-get-started/get-started-install-cli
+# https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html
 
 ---
 
@@ -50,7 +50,4 @@ packer validate .
 
  ---
 
- Fiap MBA 2022
-
-
- 
+ Fiap MBA 2023
