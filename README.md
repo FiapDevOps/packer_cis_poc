@@ -22,8 +22,9 @@ sudo yum -y install packer
 python3 -m pip install --user ansible
 ```
 
-# https://developer.hashicorp.com/packer/tutorials/docker-get-started/get-started-install-cli
-# https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html
+Referências: 
+[https://developer.hashicorp.com/packer/tutorials/docker-get-started/get-started-install-cli](https://developer.hashicorp.com/packer/tutorials/docker-get-started/get-started-install-cli)
+[https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html](https://developer.hashicorp.com/packer/tutorials/docker-get-started/get-started-install-cli)
 
 ---
 
@@ -47,6 +48,8 @@ packer validate .
  ```sh
  packer build packer-linux-ubuntu-cis.pkr.hcl
  ```
+
+Template original do CIS para Ubuntu 22: [https://github.com/ansible-lockdown/UBUNTU22-CIS](https://github.com/ansible-lockdown/UBUNTU22-CIS)
 
  ---
 
